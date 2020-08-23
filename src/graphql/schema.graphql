@@ -1,0 +1,43 @@
+type Query {
+    ping:String!
+    messages:[Message!]
+    message2:[Message2!]
+    articles:[Articles!]
+}
+
+type Mutation{
+    createMessage(title:String! content:String!, author:String!):Message
+}
+
+type Message{
+    _id: ID!,
+    title: String!,
+    content: String!,
+    author: String!
+}
+
+
+type Message2{
+    name:String,
+    lastname:String
+}
+
+
+type Articles{
+    _id:ID!,
+    author: String!,
+    title:String!, 
+    titleSection:String!,
+    description:String!,
+    urlImage: String!,
+    sobre: String!,
+    publishedAt: String!,
+    urlContendDetail:String
+
+}
+
+
+
+# type Mutation  {
+
+# }
